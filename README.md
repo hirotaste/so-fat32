@@ -41,5 +41,4 @@ Antes de começar, você precisará ter o seguinte instalado na sua máquina:
 ### Clonar o Repositório
 
 ```bash
-git clone https://github.com/seu-usuario/fat32-representation.git
-cd fat32-representation
+git clone https://github.com/hirotaste/so-fat32.git
