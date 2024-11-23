@@ -1,0 +1,23 @@
+Para programar em C# no modo console no Visual Studio Code, você pode: 
+Abrir o Visual Studio Code 
+Selecionar Arquivo > Abrir Pasta 
+Criar uma pasta e selecioná-la 
+Abrir o Terminal no Visual Studio Code 
+Digitar o comando dotnet new console --framework net8.0 
+Substituir o conteúdo do Program.cs pelo código 
+Utilizar o Kit de Desenvolvimento do C# para melhorar a produtividade em C# 
+Abrir um novo terminal com o atalho Ctrl + Shift 
+
+Explicação do código
+Inicialização do Sistema: A função InitializeFileSystem inicializa a tabela FAT (fatTable) e o disco (disk). Cada posição de fatTable recebe -1, indicando que o cluster está livre.
+
+Criação de Arquivo (CreateFile): Essa função divide o conteúdo do arquivo em clusters e procura clusters livres. Os clusters encontrados são armazenados na fatTable em uma cadeia (lista ligada). Cada cluster aponta para o próximo, e o último cluster aponta para -2, indicando o fim do arquivo.
+
+Leitura de Arquivo (ReadFile): Lê o arquivo a partir do primeiro cluster, seguindo a cadeia na fatTable até o fim do arquivo. Os dados dos clusters são concatenados e exibidos.
+
+Execução: O programa inicia o sistema de arquivos e solicita um texto do usuário para criar um arquivo, mostrando o processo de alocação e leitura.
+
+Conceitos Demonstrados
+Cluster e Alocação: Cada arquivo é armazenado em clusters e a tabela FAT controla quais clusters estão ocupados ou livres.
+Tabela FAT: Os alunos podem ver como o FAT mantém o controle da sequência de clusters ocupados por um arquivo.
+Simulação de Disco: O array disk representa clusters físicos do disco, permitindo ver o armazenamento de dados em blocos.
